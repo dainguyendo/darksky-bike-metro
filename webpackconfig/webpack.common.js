@@ -3,7 +3,8 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const parts = require('./webpack.parts');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
+
+require('dotenv').config();
 
 // Common webpack configuration for both development and production
 module.exports = (PATHS) => {
@@ -49,6 +50,12 @@ module.exports = (PATHS) => {
           title: 'Awesome Project',
           template: path.join(PATHS.app, '/index.html'),
           hash: true,
+        }),
+
+        new webpack.DefinePlugin({
+          'process.env.GOOGLE_GEOCODE_API_KEY': JSON.stringify(process.env.GOOGLE_GEOCODE_API_KEY),
+          'process.env.AWS_ACCESS_KEY': JSON.stringify(process.env.AWS_ACCESS_KEY),
+          'process.env.AWS_SECRET_ACCESS_KEY': JSON.stringify(process.env.AWS_SECRET_ACCESS_KEY),
         }),
 
         // Externals
