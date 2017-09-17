@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import 'css/main.scss';
+
+import Location from 'js/components/Location';
+import Preferences from 'js/components/Preferences';
+import Result from 'js/components/Result';
+
 // Redux Store
 import store from 'js/redux/store';
 
@@ -15,7 +20,13 @@ export default class App extends Component {
 
   render () {
     return (
-      <div className='test-dev' >Hello World</div>
+      <div>
+        <Location />
+        <Preferences />
+        <Result
+          latitude={ this.state.latitude }
+          longitude={ this.state.longitude } />
+      </div>
     );
   }
 
