@@ -1,34 +1,32 @@
 import React, { Component } from 'react';
 
-import TextField from 'material-ui/TextField';
-import TimePicker from 'material-ui/TimePicker';
-import DatePicker from 'material-ui/DatePicker';
+import Temperature from 'js/components/preferences/Temperature';
+import Rain from 'js/components/preferences/Rain';
+import Date from 'js/components/preferences/Date';
+
+import RaisedButton from 'material-ui/RaisedButton';
 
 export default class Preferences extends Component {
   constructor () {
     super();
+    this.state = { displayPreferences: false };
   }
 
   render () {
+    const show = this.state.displayPreferences ? '' : 'hidden';
     return (
-      <div id='preference'>
-        <div id='preference-temperature'>
-          <span>Temperature Bounds</span>
-          <TextField />
-          <TextField />
-        </div>
-        <div id='preference-rain'>
-          <span>Maximum Chance of Rain</span>
-          <TextField />
-        </div>
-        <div id='preference-commute-time'>
-          <span>Commute Window</span>
-          <span>Date</span>
-          <DatePicker />
-          <span>Time</span>
-          <TimePicker />
+      <div id='preference' className='column-container' >
+        <RaisedButton
+          label='Advanced'
+          onClick={ this.togglePreferences } />
+        <div className={`column-container ${show}`}>
+          <Temperature minTemperature={ this.props.minTemperature } maxTemperature={ this.props.maxTemperature } />
+          <Rain chanceOfRain={ this.props.chanceOfRain } />
+          <Date />
         </div>
       </div>
     );
   }
+
+  togglePreferences = () => { this.setState({ displayPreferences: !this.state.displayPreferences }); }
 }
