@@ -4,7 +4,8 @@ import {
   SAVE_LONGITUDE,
   SAVE_MINTEMP,
   SAVE_MAXTEMP,
-  SAVE_DATA
+  SAVE_DATA,
+  SAVE_DATE
 } from 'js/redux/constants/criteriaConstants';
 
 import initialState from 'js/redux/initialState';
@@ -31,4 +32,8 @@ export function saveMinTemp (temperature = initialState.minTemperature, action) 
 
 export function saveData (data = initialState.data, action) {
   return action.type !== SAVE_DATA ? data : action.payload;
+}
+
+export function saveDate (date = new Date(), action) {
+  return action.type !== SAVE_DATE ? date : action.payload;
 }

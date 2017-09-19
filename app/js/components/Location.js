@@ -11,7 +11,7 @@ export default class Location extends Component {
   constructor () {
     super();
     this.state = {
-      input: ''
+      input: '6856 Alicia Court, Alexandria, VA 22310'
     };
   }
 
@@ -19,6 +19,7 @@ export default class Location extends Component {
     return (
       <div id='location'>
         <TextField
+          className='text-field'
           hintText='Enter your destination'
           defaultValue='6856 Alicia Court, Alexandria, VA 22310'
           onChange={ this.handleInputChange }/>
@@ -29,15 +30,12 @@ export default class Location extends Component {
     );
   }
 
-  handleInputChange = (event, newValue) => {
-    this.setState({ input: newValue });
-  }
+  handleInputChange = (event, newValue) => { this.setState({ input: newValue }); }
 
   searchAddress = () => {
     const base = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
     const address = this.state.input.split(' ').join('+');
     const key = `&key=${process.env.GOOGLE_GEOCODE_API_KEY}`;
-
     const url = base + address + key;
 
     const xmlhttp = new XMLHttpRequest();

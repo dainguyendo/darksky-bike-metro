@@ -4,7 +4,8 @@ import {
   saveLongitude,
   saveMaxTemp,
   saveMinTemp,
-  saveData
+  saveData,
+  saveDate
 } from 'js/redux/reducers/criteriaReducers';
 
 import { combineReducers } from 'redux';
@@ -16,5 +17,6 @@ export default combineReducers({
   longitude: saveLongitude,
   minTemperature: saveMinTemp,
   maxTemperature: saveMaxTemp,
-  data: saveData
+  data: saveData,
+  date: saveDate
 });
