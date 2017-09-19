@@ -1,4 +1,21 @@
-.test-div {
+@import 'layout';
+@import 'utilities';
+
+#application-mount {
+  width: 100vh;
+  height: 100vh;
   display: flex;
-  font-family: 'Roboto';
+  flex-direction: column;
+}
+
+#application {
+  margin: 10% 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-field, .calendar {
+  width: 275px;
+  margin: 5px 10px;
 }
