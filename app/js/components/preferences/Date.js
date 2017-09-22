@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import moment from 'moment';
 
 import store from 'js/redux/store';
-import { saveDate } from 'js/redux/actions/criteriaActions';
+import { saveUnixTime } from 'js/redux/actions/criteriaActions';
 
 import TimePicker from 'material-ui/TimePicker';
 import DatePicker from 'material-ui/DatePicker';
@@ -55,7 +55,6 @@ export default class Preferences extends Component {
   updateDate = () => {
     const momentTime = moment(this.state.time);
     const momentDate = moment(this.state.date);
-
     const renderedDateTime = moment({
      year: momentDate.year(),
      month: momentDate.month(),
@@ -63,7 +62,7 @@ export default class Preferences extends Component {
      hour: momentTime.hours(),
      minute: momentTime.minutes()
    });
-
-   store.dispatch(saveDate(renderedDateTime));
+   const unix = renderedDateTime.unix();
+   store.dispatch(saveUnixTime(unix));
   }
 }
