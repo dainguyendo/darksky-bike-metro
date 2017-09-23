@@ -2,11 +2,12 @@ import {
   SAVE_RAIN,
   SAVE_LATITUDE,
   SAVE_LONGITUDE,
-  SAVE_DATE,
   SAVE_TIME,
+  SAVE_UNIXTIME,
   SAVE_MINTEMP,
   SAVE_MAXTEMP,
   SAVE_DATA,
+  SAVE_RESULT
 } from 'js/redux/constants/criteriaConstants';
 
 export function saveRain (payload) {
@@ -19,10 +20,6 @@ export function saveLatitude (payload) {
 
 export function saveLongitude (payload) {
   return { type: SAVE_LONGITUDE, payload };
-}
-
-export function saveDate (payload) {
-  return { type: SAVE_DATE, payload };
 }
 
 export function saveTime (payload) {
@@ -39,4 +36,12 @@ export function saveMaxTemp (payload) {
 
 export function saveData (payload) {
   return { type: SAVE_DATA, payload };
+}
+
+export function saveUnixTime(payload) {
+  return { type: SAVE_UNIXTIME, payload };
+}
+
+export function saveResult(payload) {
+  return { type: SAVE_RESULT, payload };
 }

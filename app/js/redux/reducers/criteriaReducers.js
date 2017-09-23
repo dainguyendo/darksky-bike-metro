@@ -5,7 +5,8 @@ import {
   SAVE_MINTEMP,
   SAVE_MAXTEMP,
   SAVE_DATA,
-  SAVE_DATE
+  SAVE_UNIXTIME,
+  SAVE_RESULT
 } from 'js/redux/constants/criteriaConstants';
 
 import initialState from 'js/redux/initialState';
@@ -34,6 +35,10 @@ export function saveData (data = initialState.data, action) {
   return action.type !== SAVE_DATA ? data : action.payload;
 }
 
-export function saveDate (date = new Date(), action) {
-  return action.type !== SAVE_DATE ? date : action.payload;
+export function saveUnixTime (date = 0, action) {
+  return action.type !== SAVE_UNIXTIME ? date : action.payload;
+}
+
+export function saveResult (result = {}, action) {
+  return action.type !== SAVE_RESULT ? result : action.payload;
 }

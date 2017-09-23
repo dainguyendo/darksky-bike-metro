@@ -5,7 +5,8 @@ import {
   saveMaxTemp,
   saveMinTemp,
   saveData,
-  saveDate
+  saveUnixTime,
+  saveResult
 } from 'js/redux/reducers/criteriaReducers';
 
 import { combineReducers } from 'redux';
@@ -18,5 +19,6 @@ export default combineReducers({
   minTemperature: saveMinTemp,
   maxTemperature: saveMaxTemp,
   data: saveData,
-  date: saveDate
+  unixTime: saveUnixTime,
+  result: saveResult
 });
