@@ -1,18 +1,62 @@
 import React, { Component } from 'react';
 
-import ResultCard from 'js/components/resultparts/ResultCard';
+import { Card, CardHeader, CardMedia } from 'material-ui/Card';
+import moment from 'moment';
+import { isEmpty } from 'js/utils/utilities';
+
+import Train from 'material-ui/svg-icons/maps/train';
+import Bike from 'material-ui/svg-icons/maps/directions-bike';
+
+import subway from 'images/subway.gif';
+import bike from 'images/bike.gif';
+
 import Weather from 'js/components/resultparts/Weather';
 
-import { isEmpty } from 'js/utils/utilities';
+const headerTitleStyle = { fontSize: '3em' };
+const headerSubtitleStyle = { fontSize: '2em' };
+
+const iconStyle = {
+  width: '75px',
+  height: '75px'
+};
 
 export default class Result extends Component {
   render () {
-    const { result } = this.props;
+    const { result, unixTime } = this.props;
     const resultClassName = isEmpty(result) ? 'hidden' : '';
+
+    let avatar = '';
+    let image = null;
+    let overlayTitle = '';
+    let overlaySubtitle = '';
+
+    if (!isEmpty(result)) {
+      if (result.method === 'metro') {
+        avatar = (<Train style={ iconStyle } />);
+        image = subway;
+        overlayTitle = 'Should catch the train';
+        overlaySubtitle = 'Guess it\'s not the best day for a ride...';
+      } else {
+        avatar = (<Bike style={ iconStyle } />);
+        image = bike;
+        overlayTitle = 'Ride on!';
+        overlaySubtitle = 'Things are looking good for a ride!';
+      }
+    }
     return (
-      <div className={ resultClassName }>
-        <ResultCard result={ this.props.result } />
-        <Weather result={ this.props.result } />
+      <div className={`full ${resultClassName}`} >
+        <Card>
+          <CardHeader
+            avatar={ avatar }
+            title={ overlayTitle }
+            titleStyle={ headerTitleStyle }
+            subtitle={ overlaySubtitle }
+            subtitleStyle={ headerSubtitleStyle } />
+          <CardMedia
+            overlay={<Weather result={ this.props.result } /> }>
+            <img className='bike' src={ image } alt='' />
+          </CardMedia>
+        </Card>
       </div>
     );
   }

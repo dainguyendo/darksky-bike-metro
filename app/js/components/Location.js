@@ -5,7 +5,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 import store from 'js/redux/store';
 import { saveLatitude, saveLongitude } from 'js/redux/actions/criteriaActions';
-
+import { execute } from 'js/utils/utilities';
 
 export default class Location extends Component {
   constructor () {
@@ -17,20 +17,30 @@ export default class Location extends Component {
 
   render () {
     return (
-      <div id='location'>
+      <div id='location' className='column-container'>
         <TextField
+          multiLine={true}
+          rowsMax={3}
           className='text-field'
           hintText='Enter your destination'
           defaultValue='6856 Alicia Court, Alexandria, VA 22310'
           onChange={ this.handleInputChange }/>
         <RaisedButton
-          label='Search'
+          className='btn'
+          label='Search Address'
           onClick={ this.searchAddress } />
       </div>
     );
   }
 
-  handleInputChange = (event, newValue) => { this.setState({ input: newValue }); }
+  handleInputChange = (event, newValue) => {
+    // If the user presses enter - go search
+    if (event.which === 13 || event.keyCode === 13) {
+      this.searchAddress();
+    } else {
+      this.setState({ input: newValue });
+    }
+  }
 
   searchAddress = () => {
     const base = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
@@ -52,6 +62,7 @@ export default class Location extends Component {
           console.log(lat, lng, formattedAddress);
           store.dispatch(saveLatitude(lat));
           store.dispatch(saveLongitude(lng));
+          execute();
         }
       }
     };

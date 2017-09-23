@@ -17,7 +17,8 @@ export default class Preferences extends Component {
     return (
       <div id='preference' className='column-container' >
         <RaisedButton
-          label='Advanced'
+          className='btn'
+          label='Configure ride conditions'
           onClick={ this.togglePreferences } />
         <div className={`column-container ${show}`}>
           <Temperature minTemperature={ this.props.minTemperature } maxTemperature={ this.props.maxTemperature } />

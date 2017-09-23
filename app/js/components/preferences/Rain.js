@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import store from 'js/redux/store';
 import { saveRain } from 'js/redux/actions/criteriaActions';
-
+import { executeChangePreferences } from 'js/utils/utilities';
 import TextField from 'material-ui/TextField';
 
 export default class Rain extends Component {
@@ -32,6 +32,7 @@ export default class Rain extends Component {
     else {
       this.setState({ errorRainChance: ''});
       store.dispatch(saveRain(rain));
+      executeChangePreferences();
     }
   }
 

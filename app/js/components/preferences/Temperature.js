@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import store from 'js/redux/store';
 import { saveMinTemp, saveMaxTemp } from 'js/redux/actions/criteriaActions';
+import { executeChangePreferences } from 'js/utils/utilities';
 
 import TextField from 'material-ui/TextField';
 
@@ -18,19 +19,19 @@ export default class Temperature extends Component {
     return (
       <div
         id='preference-temperature'
-        className='row-container' >
+        className='column-container' >
         <TextField
           defaultValue={ this.props.minTemperature }
           className='text-field'
           errorText={ this.state.errorMinTemp }
           onChange={ this.handleMinTemperature }
-          floatingLabelText='Min. Temperature' />
+          floatingLabelText='Minimum Temperature (fahrenheit)' />
         <TextField
           errorText={ this.state.errorMaxTemp }
           onChange={ this.handleMaxTemperature }
           defaultValue={ this.props.maxTemperature }
           className='text-field'
-          floatingLabelText='Max Temperature' />
+          floatingLabelText='Max Temperature (fahrenheit)' />
       </div>
     );
   }
@@ -41,6 +42,7 @@ export default class Temperature extends Component {
     else {
       this.setState({ errorMaxTemp: ''});
       store.dispatch(saveMaxTemp(temperature));
+      executeChangePreferences();
     }
   }
 
@@ -50,6 +52,7 @@ export default class Temperature extends Component {
     else {
       this.setState({ errorMinTemp: ''});
       store.dispatch(saveMinTemp(temperature));
+      executeChangePreferences();
     }
   }
 }

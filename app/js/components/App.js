@@ -3,8 +3,11 @@ import 'css/main.scss';
 
 import Location from 'js/components/Location';
 import Preferences from 'js/components/Preferences';
-import Query from 'js/components/Query';
 import Result from 'js/components/Result';
+import Header from 'js/components/Header';
+import Footer from 'js/components/Footer';
+
+import { execute } from 'js/utils/utilities';
 
 // Redux Store
 import store from 'js/redux/store';
@@ -16,7 +19,10 @@ export default class App extends Component {
     this.state = { ...store.getState() };
   }
 
-  componentDidMount () { this.unsubscribe = store.subscribe(this.storeDidUpdate); }
+  componentDidMount () {
+    this.unsubscribe = store.subscribe(this.storeDidUpdate);
+    execute();
+  }
 
   componentWillUnmount() { this.unsubscribe(); }
 
@@ -25,13 +31,17 @@ export default class App extends Component {
   render () {
     return (
       <div id='application'>
-        <Location />
-        <Preferences {...this.state} />
-        <Query
-          date={ this.state.unixTime }
-          latitude={ this.state.latitude }
-          longitude={ this.state.longitude } />
-        <Result result={ this.state.result } />
+        <div id='preference-panel' className='panel'>
+          <Header />
+          <div className='flex-grow-2'>
+            <Location />
+            <Preferences {...this.state} />
+          </div>
+          <Footer />
+        </div>
+        <div id='result-panel' className='panel'>
+          <Result result={ this.state.result } unixTime={ this.state.unixTime } />
+        </div>
       </div>
     );
   }
