@@ -28,6 +28,7 @@ module.exports = (PATHS) => {
         alias: {
           js: path.join(PATHS.app, 'js'),
           css: path.join(PATHS.app, 'style'),
+          images: path.join(PATHS.app, 'images')
         },
       },
 

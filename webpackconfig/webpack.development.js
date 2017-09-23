@@ -14,7 +14,14 @@ module.exports = (PATHS) => {
     parts.loadSass({ include: PATHS.app }),
 
     // Load Images
-    parts.loadImages(),
+    parts.fileLoad(),
+    // parts.loadImages({
+    //   include: PATHS.app,
+    //   options: {
+    //     limit: 15000,
+    //     name: '[name].[ext]',
+    //   }
+    // }),
 
     // Source Maps
     {
