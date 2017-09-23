@@ -1,3 +1,4 @@
+
 node_modules
 
 build/
@@ -5,3 +6,4 @@ build/
 .eslintcache
 
 .env
+.DS_Store

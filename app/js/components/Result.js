@@ -1,39 +1,19 @@
 import React, { Component } from 'react';
 
-import { getDarksky } from 'js/utils/lambda.utils';
+import ResultCard from 'js/components/resultparts/ResultCard';
+import Weather from 'js/components/resultparts/Weather';
 
-import RaisedButton from 'material-ui/RaisedButton';
-
-import store from 'js/redux/store';
-import { saveData } from 'js/redux/actions/criteriaActions';
+import { isEmpty } from 'js/utils/utilities';
 
 export default class Result extends Component {
-  constructor () {
-    super();
-  }
-
   render () {
+    const { result } = this.props;
+    const resultClassName = isEmpty(result) ? 'hidden' : '';
     return (
-      <div id='result'>
-        <RaisedButton label='Darksky!'
-          onClick={ this.darksky } />
+      <div className={ resultClassName }>
+        <ResultCard result={ this.props.result } />
+        <Weather result={ this.props.result } />
       </div>
     );
-  }
-
-  darksky = () => {
-    const payload = {
-      latitude: this.props.latitude,
-      longitude: this.props.longitude
-    };
-
-    getDarksky(payload)
-    .then(data => {
-      const result = JSON.parse(data.Payload);
-      store.dispatch(saveData(result));
-    })
-    .catch(err => {
-      store.dispatch(saveData({ error: err.message }));
-    });
   }
 }

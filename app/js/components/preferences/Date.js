@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import moment from 'moment';
-
+window.moment = moment;
 import store from 'js/redux/store';
 import { saveUnixTime } from 'js/redux/actions/criteriaActions';
 
