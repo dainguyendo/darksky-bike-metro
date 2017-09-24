@@ -14,7 +14,12 @@ module.exports = (PATHS) => {
     parts.loadSass({ include: PATHS.app }),
 
     // Load Images
-    parts.fileLoad(),
+    parts.fileLoad({
+      include: PATHS.app,
+      options: {
+        name: '[name].[ext]'
+      }
+    }),
     // parts.loadImages({
     //   include: PATHS.app,
     //   options: {

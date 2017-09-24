@@ -1,5 +1,6 @@
 import store from 'js/redux/store';
 import { saveResult, saveData } from 'js/redux/actions/criteriaActions';
+import moment from 'moment';
 
 // Function to invoke Lambda function specifically to query Dark Sky API
 const getDarksky = (payload) => {
@@ -31,7 +32,6 @@ const getDarksky = (payload) => {
 };
 
 const determine = (darksky, state) => {
-  console.log(darksky);
   // If the darksky request came back with an ERROR
   if (darksky.hasOwnProperty('error')) {
     store.dispatch(saveResult({}));
@@ -44,15 +44,17 @@ const determine = (darksky, state) => {
       whyIShouldMetro: [],
       summary: {
         'Summary': currently.summary,
+        'Date': moment.unix(currently.time).format('dddd, MMMM Do'),
+        'Time': moment.unix(currently.time).format('h:mm a'),
         'Temperature': `${currently.temperature}F`,
         'Cloud Cover': `${currently.cloudCover * 100}%`,
         'UV Index': currently.uvIndex,
         'Humidity': currently.humidity,
         'Precipitation Probability': `${currently.precipProbability * 100}%`,
-        'Precipitation Type': currently.precipType,
         'Wind Speed': `${currently.windSpeed} mph`,
         'Wind Gust': `${currently.windGust} mph`,
-        'Visibility': `${currently.visibility} miles`
+        'Visibility': `${currently.visibility} miles`,
+        'Dew Point': currently.dewPoint
       }
     };
 
