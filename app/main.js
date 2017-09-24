@@ -1,7 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import App from 'js/components/App';
 
-const mountPoint = document.getElementById('application-mount');
-ReactDOM.render(<App />, mountPoint);
+const Application = () => (
+  <MuiThemeProvider>
+      <App />
+  </MuiThemeProvider>
+);
+
+const mount = document.getElementById('application-mount');
+ReactDOM.render(<Application />, mount);
