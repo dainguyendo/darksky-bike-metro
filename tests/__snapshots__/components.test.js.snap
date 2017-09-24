@@ -1,0 +1,1021 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header matches snapshot 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div
+    id="header"
+>
+    <div
+        className="title"
+        style={
+            Object {
+                "color": "#f44336",
+              }
+        }
+    >
+        <MapsDirectionsBike
+            style={
+                Object {
+                    "height": "100px",
+                    "width": "100px",
+                  }
+            }
+        />
+        <span>
+            ||
+        </span>
+        <MapsTrain
+            style={
+                Object {
+                    "height": "100px",
+                    "width": "100px",
+                  }
+            }
+        />
+    </div>
+</div>,
+  "nodes": Array [
+    <div
+      id="header"
+>
+      <div
+            className="title"
+            style={
+                  Object {
+                        "color": "#f44336",
+                      }
+            }
+      >
+            <MapsDirectionsBike
+                  style={
+                        Object {
+                              "height": "100px",
+                              "width": "100px",
+                            }
+                  }
+            />
+            <span>
+                  ||
+            </span>
+            <MapsTrain
+                  style={
+                        Object {
+                              "height": "100px",
+                              "width": "100px",
+                            }
+                  }
+            />
+      </div>
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <Header />,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": Header {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {},
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div
+          id="header"
+>
+          <div
+                    className="title"
+                    style={
+                              Object {
+                                        "color": "#f44336",
+                                      }
+                    }
+          >
+                    <MapsDirectionsBike
+                              style={
+                                        Object {
+                                                  "height": "100px",
+                                                  "width": "100px",
+                                                }
+                              }
+                    />
+                    <span>
+                              ||
+                    </span>
+                    <MapsTrain
+                              style={
+                                        Object {
+                                                  "height": "100px",
+                                                  "width": "100px",
+                                                }
+                              }
+                    />
+          </div>
+</div>,
+        "_debugID": 2,
+        "_renderedOutput": <div
+          id="header"
+>
+          <div
+                    className="title"
+                    style={
+                              Object {
+                                        "color": "#f44336",
+                                      }
+                    }
+          >
+                    <MapsDirectionsBike
+                              style={
+                                        Object {
+                                                  "height": "100px",
+                                                  "width": "100px",
+                                                }
+                              }
+                    />
+                    <span>
+                              ||
+                    </span>
+                    <MapsTrain
+                              style={
+                                        Object {
+                                                  "height": "100px",
+                                                  "width": "100px",
+                                                }
+                              }
+                    />
+          </div>
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Header />,
+}
+`;
+
+exports[`Location matches snapshot 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div
+    className="column-container"
+    id="location"
+>
+    <TextField
+        className="text-field"
+        defaultValue="6856 Alicia Court, Alexandria, VA 22310"
+        disabled={false}
+        errorText=""
+        floatingLabelFixed={false}
+        fullWidth={false}
+        hintText="Enter your destination"
+        multiLine={true}
+        onChange={[Function]}
+        rows={1}
+        rowsMax={3}
+        type="text"
+        underlineShow={true}
+    />
+    <RaisedButton
+        className="btn"
+        disabled={false}
+        fullWidth={false}
+        label="Search Address"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+    />
+</div>,
+  "nodes": Array [
+    <div
+      className="column-container"
+      id="location"
+>
+      <TextField
+            className="text-field"
+            defaultValue="6856 Alicia Court, Alexandria, VA 22310"
+            disabled={false}
+            errorText=""
+            floatingLabelFixed={false}
+            fullWidth={false}
+            hintText="Enter your destination"
+            multiLine={true}
+            onChange={[Function]}
+            rows={1}
+            rowsMax={3}
+            type="text"
+            underlineShow={true}
+      />
+      <RaisedButton
+            className="btn"
+            disabled={false}
+            fullWidth={false}
+            label="Search Address"
+            labelPosition="after"
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+      />
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <Location />,
+      "_debugID": 3,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": Location {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "handleInputChange": [Function],
+        "props": Object {},
+        "refs": Object {},
+        "searchAddress": [Function],
+        "state": Object {
+          "errorAddress": "",
+          "input": "6856 Alicia Court, Alexandria, VA 22310",
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 2,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div
+          className="column-container"
+          id="location"
+>
+          <TextField
+                    className="text-field"
+                    defaultValue="6856 Alicia Court, Alexandria, VA 22310"
+                    disabled={false}
+                    errorText=""
+                    floatingLabelFixed={false}
+                    fullWidth={false}
+                    hintText="Enter your destination"
+                    multiLine={true}
+                    onChange={[Function]}
+                    rows={1}
+                    rowsMax={3}
+                    type="text"
+                    underlineShow={true}
+          />
+          <RaisedButton
+                    className="btn"
+                    disabled={false}
+                    fullWidth={false}
+                    label="Search Address"
+                    labelPosition="after"
+                    onClick={[Function]}
+                    primary={false}
+                    secondary={false}
+          />
+</div>,
+        "_debugID": 4,
+        "_renderedOutput": <div
+          className="column-container"
+          id="location"
+>
+          <TextField
+                    className="text-field"
+                    defaultValue="6856 Alicia Court, Alexandria, VA 22310"
+                    disabled={false}
+                    errorText=""
+                    floatingLabelFixed={false}
+                    fullWidth={false}
+                    hintText="Enter your destination"
+                    multiLine={true}
+                    onChange={[Function]}
+                    rows={1}
+                    rowsMax={3}
+                    type="text"
+                    underlineShow={true}
+          />
+          <RaisedButton
+                    className="btn"
+                    disabled={false}
+                    fullWidth={false}
+                    label="Search Address"
+                    labelPosition="after"
+                    onClick={[Function]}
+                    primary={false}
+                    secondary={false}
+          />
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Location />,
+}
+`;
+
+exports[`Preferences matches snapshot 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div
+    className="column-container"
+    id="preference"
+>
+    <RaisedButton
+        className="btn"
+        disabled={false}
+        fullWidth={false}
+        label="Configure ride conditions"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+    />
+    <div
+        className="column-container hidden"
+    >
+        <Temperature
+            maxTemperature={100}
+            minTemperature={32}
+        />
+        <Rain
+            chanceOfRain={50}
+        />
+        <Preferences />
+    </div>
+</div>,
+  "nodes": Array [
+    <div
+      className="column-container"
+      id="preference"
+>
+      <RaisedButton
+            className="btn"
+            disabled={false}
+            fullWidth={false}
+            label="Configure ride conditions"
+            labelPosition="after"
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+      />
+      <div
+            className="column-container hidden"
+      >
+            <Temperature
+                  maxTemperature={100}
+                  minTemperature={32}
+            />
+            <Rain
+                  chanceOfRain={50}
+            />
+            <Preferences />
+      </div>
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <Preferences
+        chanceOfRain={50}
+        data={Object {}}
+        drawerVisible={false}
+        latitude={38.8935755}
+        longitude={-77.0846155}
+        maxTemperature={100}
+        minTemperature={32}
+        result={Object {}}
+        unixTime={1506250800}
+/>,
+      "_debugID": 5,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": Preferences {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "chanceOfRain": 50,
+          "data": Object {},
+          "drawerVisible": false,
+          "latitude": 38.8935755,
+          "longitude": -77.0846155,
+          "maxTemperature": 100,
+          "minTemperature": 32,
+          "result": Object {},
+          "unixTime": 1506250800,
+        },
+        "refs": Object {},
+        "state": Object {
+          "displayPreferences": false,
+        },
+        "togglePreferences": [Function],
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 3,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div
+          className="column-container"
+          id="preference"
+>
+          <RaisedButton
+                    className="btn"
+                    disabled={false}
+                    fullWidth={false}
+                    label="Configure ride conditions"
+                    labelPosition="after"
+                    onClick={[Function]}
+                    primary={false}
+                    secondary={false}
+          />
+          <div
+                    className="column-container hidden"
+          >
+                    <Temperature
+                              maxTemperature={100}
+                              minTemperature={32}
+                    />
+                    <Rain
+                              chanceOfRain={50}
+                    />
+                    <Preferences />
+          </div>
+</div>,
+        "_debugID": 6,
+        "_renderedOutput": <div
+          className="column-container"
+          id="preference"
+>
+          <RaisedButton
+                    className="btn"
+                    disabled={false}
+                    fullWidth={false}
+                    label="Configure ride conditions"
+                    labelPosition="after"
+                    onClick={[Function]}
+                    primary={false}
+                    secondary={false}
+          />
+          <div
+                    className="column-container hidden"
+          >
+                    <Temperature
+                              maxTemperature={100}
+                              minTemperature={32}
+                    />
+                    <Rain
+                              chanceOfRain={50}
+                    />
+                    <Preferences />
+          </div>
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Preferences
+    chanceOfRain={50}
+    data={Object {}}
+    drawerVisible={false}
+    latitude={38.8935755}
+    longitude={-77.0846155}
+    maxTemperature={100}
+    minTemperature={32}
+    result={Object {}}
+    unixTime={1506250800}
+/>,
+}
+`;
+
+exports[`Weather matches snapshot 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <Table
+    allRowsSelected={false}
+    fixedFooter={false}
+    fixedHeader={false}
+    height="100%"
+    multiSelectable={false}
+    selectable={false}
+    style={
+        Object {
+            "backgroundColor": "rgba(0,0,0,0)",
+          }
+    }
+>
+    <TableBody
+        allRowsSelected={false}
+        deselectOnClickaway={true}
+        displayRowCheckbox={false}
+        multiSelectable={false}
+        preScanRows={true}
+        selectable={true}
+        style={
+            Object {
+                "overflow": "scroll",
+              }
+        }
+    />
+</Table>,
+  "nodes": Array [
+    <Table
+      allRowsSelected={false}
+      fixedFooter={false}
+      fixedHeader={false}
+      height="100%"
+      multiSelectable={false}
+      selectable={false}
+      style={
+            Object {
+                  "backgroundColor": "rgba(0,0,0,0)",
+                }
+      }
+>
+      <TableBody
+            allRowsSelected={false}
+            deselectOnClickaway={true}
+            displayRowCheckbox={false}
+            multiSelectable={false}
+            preScanRows={true}
+            selectable={true}
+            style={
+                  Object {
+                        "overflow": "scroll",
+                      }
+            }
+      />
+</Table>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <Weather
+        result={Object {}}
+/>,
+      "_debugID": 7,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": Weather {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "result": Object {},
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 4,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <Table
+          allRowsSelected={false}
+          fixedFooter={false}
+          fixedHeader={false}
+          height="100%"
+          multiSelectable={false}
+          selectable={false}
+          style={
+                    Object {
+                              "backgroundColor": "rgba(0,0,0,0)",
+                            }
+          }
+>
+          <TableBody
+                    allRowsSelected={false}
+                    deselectOnClickaway={true}
+                    displayRowCheckbox={false}
+                    multiSelectable={false}
+                    preScanRows={true}
+                    selectable={true}
+                    style={
+                              Object {
+                                        "overflow": "scroll",
+                                      }
+                    }
+          />
+</Table>,
+        "_debugID": 8,
+        "_renderedOutput": <Table
+          allRowsSelected={false}
+          fixedFooter={false}
+          fixedHeader={false}
+          height="100%"
+          multiSelectable={false}
+          selectable={false}
+          style={
+                    Object {
+                              "backgroundColor": "rgba(0,0,0,0)",
+                            }
+          }
+>
+          <TableBody
+                    allRowsSelected={false}
+                    deselectOnClickaway={true}
+                    displayRowCheckbox={false}
+                    multiSelectable={false}
+                    preScanRows={true}
+                    selectable={true}
+                    style={
+                              Object {
+                                        "overflow": "scroll",
+                                      }
+                    }
+          />
+</Table>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Weather
+    result={Object {}}
+/>,
+}
+`;
+
+exports[`Welcome matches snapshot 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div>
+    <FlatButton
+        className="btn"
+        disabled={false}
+        fullWidth={false}
+        icon={<ActionHelp />}
+        label="Getting started"
+        labelPosition="after"
+        labelStyle={Object {}}
+        onClick={[Function]}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        primary={false}
+        secondary={false}
+    />
+    <Dialog
+        actions={
+            Array [
+                <FlatButton
+                  disabled={false}
+                  fullWidth={false}
+                  label="Close"
+                  labelPosition="after"
+                  labelStyle={Object {}}
+                  onClick={[Function]}
+                  onKeyboardFocus={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onTouchStart={[Function]}
+                  primary={true}
+                  secondary={false}
+            />,
+              ]
+        }
+        autoDetectWindowHeight={true}
+        autoScrollBodyContent={false}
+        className="subtitle"
+        modal={false}
+        onRequestClose={[Function]}
+        open={false}
+        repositionOnUpdate={true}
+        title="Welcome"
+    >
+        <div
+            className="paragraph"
+        >
+            Commuting choices are tough sometimes, especially when weather comes into play. Use this application to help make your choice easier! Simply search your commute address and see if you should bike or take the train. A little picky? Use 'Configure Ride Conditions' to set the specifics!
+        </div>
+    </Dialog>
+</div>,
+  "nodes": Array [
+    <div>
+      <FlatButton
+            className="btn"
+            disabled={false}
+            fullWidth={false}
+            icon={<ActionHelp />}
+            label="Getting started"
+            labelPosition="after"
+            labelStyle={Object {}}
+            onClick={[Function]}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onTouchStart={[Function]}
+            primary={false}
+            secondary={false}
+      />
+      <Dialog
+            actions={
+                  Array [
+                        <FlatButton
+                          disabled={false}
+                          fullWidth={false}
+                          label="Close"
+                          labelPosition="after"
+                          labelStyle={Object {}}
+                          onClick={[Function]}
+                          onKeyboardFocus={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          onTouchStart={[Function]}
+                          primary={true}
+                          secondary={false}
+                  />,
+                      ]
+            }
+            autoDetectWindowHeight={true}
+            autoScrollBodyContent={false}
+            className="subtitle"
+            modal={false}
+            onRequestClose={[Function]}
+            open={false}
+            repositionOnUpdate={true}
+            title="Welcome"
+      >
+            <div
+                  className="paragraph"
+            >
+                  Commuting choices are tough sometimes, especially when weather comes into play. Use this application to help make your choice easier! Simply search your commute address and see if you should bike or take the train. A little picky? Use 'Configure Ride Conditions' to set the specifics!
+            </div>
+      </Dialog>
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <Welcome />,
+      "_debugID": 9,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": Welcome {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "handleClose": [Function],
+        "handleOpen": [Function],
+        "props": Object {},
+        "refs": Object {},
+        "state": Object {
+          "open": false,
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 5,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div>
+          <FlatButton
+                    className="btn"
+                    disabled={false}
+                    fullWidth={false}
+                    icon={<ActionHelp />}
+                    label="Getting started"
+                    labelPosition="after"
+                    labelStyle={Object {}}
+                    onClick={[Function]}
+                    onKeyboardFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onTouchStart={[Function]}
+                    primary={false}
+                    secondary={false}
+          />
+          <Dialog
+                    actions={
+                              Array [
+                                        <FlatButton
+                                          disabled={false}
+                                          fullWidth={false}
+                                          label="Close"
+                                          labelPosition="after"
+                                          labelStyle={Object {}}
+                                          onClick={[Function]}
+                                          onKeyboardFocus={[Function]}
+                                          onMouseEnter={[Function]}
+                                          onMouseLeave={[Function]}
+                                          onTouchStart={[Function]}
+                                          primary={true}
+                                          secondary={false}
+                              />,
+                                      ]
+                    }
+                    autoDetectWindowHeight={true}
+                    autoScrollBodyContent={false}
+                    className="subtitle"
+                    modal={false}
+                    onRequestClose={[Function]}
+                    open={false}
+                    repositionOnUpdate={true}
+                    title="Welcome"
+          >
+                    <div
+                              className="paragraph"
+                    >
+                              Commuting choices are tough sometimes, especially when weather comes into play. Use this application to help make your choice easier! Simply search your commute address and see if you should bike or take the train. A little picky? Use 'Configure Ride Conditions' to set the specifics!
+                    </div>
+          </Dialog>
+</div>,
+        "_debugID": 10,
+        "_renderedOutput": <div>
+          <FlatButton
+                    className="btn"
+                    disabled={false}
+                    fullWidth={false}
+                    icon={<ActionHelp />}
+                    label="Getting started"
+                    labelPosition="after"
+                    labelStyle={Object {}}
+                    onClick={[Function]}
+                    onKeyboardFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onTouchStart={[Function]}
+                    primary={false}
+                    secondary={false}
+          />
+          <Dialog
+                    actions={
+                              Array [
+                                        <FlatButton
+                                          disabled={false}
+                                          fullWidth={false}
+                                          label="Close"
+                                          labelPosition="after"
+                                          labelStyle={Object {}}
+                                          onClick={[Function]}
+                                          onKeyboardFocus={[Function]}
+                                          onMouseEnter={[Function]}
+                                          onMouseLeave={[Function]}
+                                          onTouchStart={[Function]}
+                                          primary={true}
+                                          secondary={false}
+                              />,
+                                      ]
+                    }
+                    autoDetectWindowHeight={true}
+                    autoScrollBodyContent={false}
+                    className="subtitle"
+                    modal={false}
+                    onRequestClose={[Function]}
+                    open={false}
+                    repositionOnUpdate={true}
+                    title="Welcome"
+          >
+                    <div
+                              className="paragraph"
+                    >
+                              Commuting choices are tough sometimes, especially when weather comes into play. Use this application to help make your choice easier! Simply search your commute address and see if you should bike or take the train. A little picky? Use 'Configure Ride Conditions' to set the specifics!
+                    </div>
+          </Dialog>
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Welcome />,
+}
+`;

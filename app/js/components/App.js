@@ -52,7 +52,7 @@ export default class App extends Component {
           <Footer />
         </div>
         <div id='result-panel' className='panel'>
-          <Result result={ this.state.result } unixTime={ this.state.unixTime } />
+          <Result result={ this.state.result } />
         </div>
         <FloatingActionButton
           className='fab-drawer-controller'

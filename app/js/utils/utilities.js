@@ -31,34 +31,40 @@ const getDarksky = (payload) => {
 };
 
 const determine = (darksky, state) => {
-  // Grab current weather information for requested date
-  const { currently } = darksky;
-  // Init result object to be dispatched
-  const result = {
-    method: '',
-    whyIShouldMetro: [],
-    summary: {
-      'Summary': currently.summary,
-      'Temperature': `${currently.temperature}F`,
-      'Cloud Cover': `${currently.cloudCover * 100}%`,
-      'UV Index': currently.uvIndex,
-      'Humidity': currently.humidity,
-      'Precipitation Probability': `${currently.precipProbability * 100}%`,
-      'Precipitation Type': currently.precipType,
-      'Wind Speed': `${currently.windSpeed} mph`,
-      'Wind Gust': `${currently.windGust} mph`,
-      'Visibility': `${currently.visibility} miles`
-    }
-  };
+  console.log(darksky);
+  // If the darksky request came back with an ERROR
+  if (darksky.hasOwnProperty('error')) {
+    store.dispatch(saveResult({}));
+  } else {
+    // Grab current weather information for requested date
+    const { currently } = darksky;
+    // Init result object to be dispatched
+    const result = {
+      method: '',
+      whyIShouldMetro: [],
+      summary: {
+        'Summary': currently.summary,
+        'Temperature': `${currently.temperature}F`,
+        'Cloud Cover': `${currently.cloudCover * 100}%`,
+        'UV Index': currently.uvIndex,
+        'Humidity': currently.humidity,
+        'Precipitation Probability': `${currently.precipProbability * 100}%`,
+        'Precipitation Type': currently.precipType,
+        'Wind Speed': `${currently.windSpeed} mph`,
+        'Wind Gust': `${currently.windGust} mph`,
+        'Visibility': `${currently.visibility} miles`
+      }
+    };
 
-  // Check temperature being out of bounds
-  if (currently.temperature < state.minTemperature || currently.temperature > state.maxTemperature) { result.whyIShouldMetro.push('temperature'); }
-  // Check chance of rain
-  if (currently.precipProbability > state.chanceOfRain) { result.whyIShouldMetro.push('rain'); }
-  // If whyIShouldMetro arrary has contents - those are the reasons why the user should metro
-  if (result.whyIShouldMetro.length !== 0) { result.method = 'metro'; }
-  else { result.method = 'bike'; }
-  store.dispatch(saveResult(result));
+    // Check temperature being out of bounds
+    if (currently.temperature < state.minTemperature || currently.temperature > state.maxTemperature) { result.whyIShouldMetro.push('temperature'); }
+    // Check chance of rain
+    if (currently.precipProbability > state.chanceOfRain) { result.whyIShouldMetro.push('rain'); }
+    // If whyIShouldMetro arrary has contents - those are the reasons why the user should metro
+    if (result.whyIShouldMetro.length !== 0) { result.method = 'metro'; }
+    else { result.method = 'bike'; }
+    store.dispatch(saveResult(result));
+  }
 };
 
 exports.execute = () => {
@@ -74,7 +80,7 @@ exports.execute = () => {
   })
   .catch((err) => {
     console.log('Execute ERROR', err);
-    store.dispatch(saveResult(false));
+    store.dispatch(saveResult({}));
   });
 };
 

@@ -9,7 +9,7 @@ import Bike from 'material-ui/svg-icons/maps/directions-bike';
 import subway from 'images/subway.gif';
 import bike from 'images/bike.gif';
 
-import Weather from 'js/components/resultparts/Weather';
+import Weather from 'js/components/Weather';
 
 const headerTitleStyle = { fontSize: '3em' };
 const headerSubtitleStyle = { fontSize: '2em' };

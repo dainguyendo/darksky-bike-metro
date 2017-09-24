@@ -2,7 +2,6 @@ import {
   SAVE_RAIN,
   SAVE_LATITUDE,
   SAVE_LONGITUDE,
-  SAVE_TIME,
   SAVE_UNIXTIME,
   SAVE_MINTEMP,
   SAVE_MAXTEMP,
@@ -21,10 +20,6 @@ export function saveLatitude (payload) {
 
 export function saveLongitude (payload) {
   return { type: SAVE_LONGITUDE, payload };
-}
-
-export function saveTime (payload) {
-  return { type: SAVE_TIME, payload };
 }
 
 export function saveMinTemp (payload) {
