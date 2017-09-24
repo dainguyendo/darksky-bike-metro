@@ -3,8 +3,8 @@ module.exports = {
   chanceOfRain: 50,
   minTemperature: 32,
   maxTemperature: 100,
-  latitude: 38.8935755,
-  longitude: -77.0846155,
+  latitude: 38.8976763,
+  longitude: -77.0387185,
   data: {},
   drawerOpen: false
 };

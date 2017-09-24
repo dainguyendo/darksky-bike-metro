@@ -11,7 +11,7 @@ export default class Location extends Component {
   constructor () {
     super();
     this.state = {
-      input: '6856 Alicia Court, Alexandria, VA 22310',
+      input: 'The White House',
       errorAddress: ''
     };
   }
@@ -25,7 +25,7 @@ export default class Location extends Component {
           rowsMax={3}
           className='text-field'
           hintText='Enter your destination'
-          defaultValue='6856 Alicia Court, Alexandria, VA 22310'
+          defaultValue='The White House'
           onChange={ this.handleInputChange } />
         <RaisedButton
           className='btn'

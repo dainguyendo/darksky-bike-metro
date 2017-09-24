@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const parts = require('./webpack.parts');
-const CompressionWebpackPlugin = require('compression-webpack-plugin');
+// const CompressionWebpackPlugin = require('compression-webpack-plugin');
 
 // TODO: uglifyjs-webpack-plugin, compression-webpack-plugin
 
@@ -12,13 +12,20 @@ module.exports = (PATHS) => {
     parts.extractCSS({ include: PATHS.app, use: ['css-loader', parts.autoprefix(), 'sass-loader' ]}),
 
     // Load Images
-    parts.loadImages({
+    // Load Images
+    parts.fileLoad({
       include: PATHS.app,
       options: {
-        limit: 15000,
-        name: '[name].[ext]',
-      },
+        name: '[name].[ext]'
+      }
     }),
+    // parts.loadImages({
+    //   include: PATHS.app,
+    //   options: {
+    //     limit: 15000,
+    //     name: '[name].[ext]',
+    //   },
+    // }),
 
     // Source Maps
     parts.generateSourceMaps({ type: 'source-map' }),
@@ -38,13 +45,13 @@ module.exports = (PATHS) => {
           }
         ),
         new webpack.HashedModuleIdsPlugin(),
-        new CompressionWebpackPlugin({
-          asset: '[path].gz[query]',
-          algorithm: 'gzip',
-          test: /\.(js|html|css)$/,
-          threshold: 10240,
-          minRatio: 0.8,
-        }),
+        // new CompressionWebpackPlugin({
+        //   asset: '[path].gz[query]',
+        //   algorithm: 'gzip',
+        //   test: /\.(js|html|css)$/,
+        //   threshold: 10240,
+        //   minRatio: 0.8,
+        // }),
       ],
     },
   ]);
