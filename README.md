@@ -5,6 +5,24 @@
 2. `npm run start`
 3. `localhost:3000`
 
+### Environment Variables
+This application requires a `.env` file to be able to:
+1. Call the Google Geocoding API
+2. Invoke the lambda function to query the Dark Sky API
+
+The file should resemble:
+```python
+# GOOGLE GEOCODE API KEY
+GOOGLE_GEOCODE_API_KEY=<KEY>
+
+# AWS KEYS TO INVOKE LAMBDAS
+AWS_ACCESS_KEY=<ACCESS_KEY>
+AWS_SECRET_ACCESS_KEY=<SECRET_KEY>
+```
+
+### Additional information
+The application also invokes an [AWS Lambda Function](https://aws.amazon.com/lambda/) where the code is located in the `lambda/` folder. You can host it on your AWS account to run it locally.
+
 ## NPM Scripts
 ---
 + `npm run start`
@@ -41,4 +59,4 @@
 
 ## Development
 ---
-Application utilizes [React](https://facebook.github.io/react/ "React") for building user interfaces, [Redux](http://redux.js.org/ "Redux") for state management.
+Application utilizes [React](https://facebook.github.io/react/ "React") for building user interfaces, [Redux](http://redux.js.org/ "Redux") for state management, and [Webpack](https://webpack.js.org/) for bundling.
