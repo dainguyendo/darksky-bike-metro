@@ -15,11 +15,17 @@ const tableBodyStyle = {
 
 const fontBolderColorStyle = {
   fontWeight: 'bolder',
-  color: Colors.grey50
+  color: Colors.grey50,
+  fontSize: '14px',
+  paddingLeft: '5px',
+  paddingRight: '5px'
 };
 
 const fontColorStyle = {
-  color: Colors.grey50
+  color: Colors.grey50,
+  fontSize: '14px',
+  paddingLeft: '5px',
+  paddingRight: '5px'
 };
 
 const tableStyle = {
@@ -32,10 +38,10 @@ export default class Weather extends Component {
     let row = null;
 
     if (!isEmpty(result)) {
-      row = Object.entries(result.summary).map(entry => {
+      row = Object.entries(result.summary).map((entry, idx) => {
         return (
-          <TableRow>
-            <TableRowColumn style={ fontBolderColorStyle }>{ entry[0] }</TableRowColumn>
+          <TableRow key={ idx }>
+            <TableRowColumn style={ fontBolderColorStyle }>{ `${entry[0]}` }</TableRowColumn>
             <TableRowColumn style={ fontColorStyle }>{ entry[1] }</TableRowColumn>
           </TableRow>
         );

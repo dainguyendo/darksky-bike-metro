@@ -5,7 +5,6 @@ import Train from 'material-ui/svg-icons/maps/train';
 import Bike from 'material-ui/svg-icons/maps/directions-bike';
 
 const titleContainerStyle = {
-  backgroundColor: Colors.grey900,
   color: Colors.red500
 };
 

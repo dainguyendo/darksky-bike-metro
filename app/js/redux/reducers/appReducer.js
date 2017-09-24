@@ -6,7 +6,8 @@ import {
   saveMinTemp,
   saveData,
   saveUnixTime,
-  saveResult
+  saveResult,
+  toggleDrawer
 } from 'js/redux/reducers/criteriaReducers';
 
 import { combineReducers } from 'redux';
@@ -20,5 +21,6 @@ export default combineReducers({
   maxTemperature: saveMaxTemp,
   data: saveData,
   unixTime: saveUnixTime,
-  result: saveResult
+  result: saveResult,
+  drawerVisible: toggleDrawer
 });

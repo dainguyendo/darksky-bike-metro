@@ -5,5 +5,6 @@ module.exports = {
   maxTemperature: 100,
   latitude: 38.8935755,
   longitude: -77.0846155,
-  data: {}
+  data: {},
+  drawerOpen: false
 };

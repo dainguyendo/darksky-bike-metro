@@ -6,7 +6,8 @@ import {
   SAVE_MAXTEMP,
   SAVE_DATA,
   SAVE_UNIXTIME,
-  SAVE_RESULT
+  SAVE_RESULT,
+  TOGGLE_DRAWER
 } from 'js/redux/constants/criteriaConstants';
 
 import initialState from 'js/redux/initialState';
@@ -41,4 +42,8 @@ export function saveUnixTime (date = 0, action) {
 
 export function saveResult (result = {}, action) {
   return action.type !== SAVE_RESULT ? result : action.payload;
+}
+
+export function toggleDrawer (visible = initialState.drawerOpen, action) {
+  return action.type !== TOGGLE_DRAWER ? visible : action.payload;
 }

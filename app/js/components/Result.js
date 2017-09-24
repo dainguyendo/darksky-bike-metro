@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import { Card, CardHeader, CardMedia } from 'material-ui/Card';
-import moment from 'moment';
 import { isEmpty } from 'js/utils/utilities';
 
 import Train from 'material-ui/svg-icons/maps/train';
@@ -22,7 +21,7 @@ const iconStyle = {
 
 export default class Result extends Component {
   render () {
-    const { result, unixTime } = this.props;
+    const { result } = this.props;
     const resultClassName = isEmpty(result) ? 'hidden' : '';
 
     let avatar = '';
@@ -53,8 +52,11 @@ export default class Result extends Component {
             subtitle={ overlaySubtitle }
             subtitleStyle={ headerSubtitleStyle } />
           <CardMedia
+            className='card-media'
+            overlayStyle={{ padding: '0px !important' }}
+            overlayContentStyle={{ height: '100%', width: '50%', padding: '0px' }}
             overlay={<Weather result={ this.props.result } /> }>
-            <img className='bike' src={ image } alt='' />
+            <img className='card-media-image' src={ image } alt='' />
           </CardMedia>
         </Card>
       </div>

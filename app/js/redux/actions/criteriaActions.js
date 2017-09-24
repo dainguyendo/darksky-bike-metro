@@ -7,7 +7,8 @@ import {
   SAVE_MINTEMP,
   SAVE_MAXTEMP,
   SAVE_DATA,
-  SAVE_RESULT
+  SAVE_RESULT,
+  TOGGLE_DRAWER
 } from 'js/redux/constants/criteriaConstants';
 
 export function saveRain (payload) {
@@ -44,4 +45,8 @@ export function saveUnixTime(payload) {
 
 export function saveResult(payload) {
   return { type: SAVE_RESULT, payload };
+}
+
+export function toggleDrawer (payload) {
+  return { type: TOGGLE_DRAWER, payload };
 }

@@ -41,10 +41,13 @@ const determine = (darksky, state) => {
       'Summary': currently.summary,
       'Temperature': `${currently.temperature}F`,
       'Cloud Cover': `${currently.cloudCover * 100}%`,
+      'UV Index': currently.uvIndex,
       'Humidity': currently.humidity,
       'Precipitation Probability': `${currently.precipProbability * 100}%`,
       'Precipitation Type': currently.precipType,
-      'Wind Speed': `${currently.windSpeed} mph`
+      'Wind Speed': `${currently.windSpeed} mph`,
+      'Wind Gust': `${currently.windGust} mph`,
+      'Visibility': `${currently.visibility} miles`
     }
   };
 
