@@ -9,7 +9,7 @@ import { execute } from 'js/utils/utilities';
 import TimePicker from 'material-ui/TimePicker';
 import DatePicker from 'material-ui/DatePicker';
 
-export default class Preferences extends Component {
+export default class Calendar extends Component {
   constructor () {
     super();
     const today = new Date();
@@ -20,19 +20,30 @@ export default class Preferences extends Component {
     this.updateDate();
   }
 
+  shouldComponentUpdate (nextProps, nextState) {
+    if (nextState === this.state) { return false; }
+    else { return true; }
+  }
+
+  componentDidUpdate () {
+    this.updateDate();
+    execute();
+  }
+
   render () {
     return (
       <div
         id='preference-commute-time'
         className='column-container' >
         <DatePicker
-          formatDate={ this.formatDate }
           value={ this.state.date }
           onChange={ this.handleDate }
+          hintText='Date of commute'
+          formatDate={ this.formatDate }
           mode='landscape'
           minDate={ new Date() }
           maxDate={ new Date(new Date().getTime() + 7 * 24 * 60 * 60 * 1000) }
-          hintText='Date of commute' />
+           />
         <TimePicker
           value={ this.state.time }
           onChange={ this.handleTime }
@@ -46,15 +57,9 @@ export default class Preferences extends Component {
     return newDate.format('dddd, MMMM Do YYYY');
   }
 
-  handleDate = (event, date) => {
-    this.setState({ date });
-    this.updateDate();
-  }
+  handleDate = (event, date) => { this.setState({ date }); }
 
-  handleTime = (event, time) => {
-    this.setState({ time });
-    this.updateDate();
-  }
+  handleTime = (event, time) => { this.setState({ time }); }
 
   updateDate = () => {
     const momentTime = moment(this.state.time);
@@ -68,6 +73,5 @@ export default class Preferences extends Component {
    });
    const unix = renderedDateTime.unix();
    store.dispatch(saveUnixTime(unix));
-   execute();
   }
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Temperature from 'js/components/preferences/Temperature';
 import Rain from 'js/components/preferences/Rain';
-import Date from 'js/components/preferences/Date';
+import Calendar from 'js/components/preferences/Calendar';
 
 import RaisedButton from 'material-ui/RaisedButton';
 
@@ -23,7 +23,7 @@ export default class Preferences extends Component {
         <div className={`column-container ${show}`}>
           <Temperature minTemperature={ this.props.minTemperature } maxTemperature={ this.props.maxTemperature } />
           <Rain chanceOfRain={ this.props.chanceOfRain } />
-          <Date />
+          <Calendar />
         </div>
       </div>
     );
