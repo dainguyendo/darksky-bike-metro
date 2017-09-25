@@ -26,6 +26,7 @@ export default class Location extends Component {
           className='text-field'
           hintText='Enter your destination'
           defaultValue='The White House'
+          value={this.state.input}
           onChange={ this.handleInputChange } />
         <RaisedButton
           className='btn'
@@ -60,8 +61,7 @@ export default class Location extends Component {
             const result = xmlhttp.response.results[0];
             const { lat, lng } = result.geometry.location;
             const formattedAddress = result.formatted_address;
-
-            console.log(lat, lng, formattedAddress);
+            this.setState({ input: formattedAddress });
             store.dispatch(saveLatitude(lat));
             store.dispatch(saveLongitude(lng));
             execute();
